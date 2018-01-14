@@ -1,0 +1,43 @@
+2.72, 2.78, 2.82
+A) maxbytes is signed int and sizeof returns size_t which is unsigned integer.
+Operation between unsigned and signed int undergoes unsigned arithmetic; therefore, 
+maxbytes - sizeof (val) is converted to unsigned int. unsigned int has a minumum value
+of 0. Therefore, the condition will always be true. 
+
+B) If maxbyte is bigger than 0 (minimum value of unsigned int), there will be 
+no change in value during its conversion to unsigned int. 
+Therefore, more accurate conditional test would be:
+  (maxbytes >= 0 && (maxbytes >= sizeof(val))
+
+2.78:
+int divide_power2 (int x, int k)
+{
+  int neg = x & (1 << 31);
+  return (neg ? x + (1<<k)-1 : x) >> k;
+}
+
+2.82:
+A) does not always yield 1 (true). The values of x = 0 and y = 0 lead the expressions
+to yield 0.
+B) always yields 1 (true). 
+LHS == (x + y) << 4 + y + x == (x + y)*2^4 + y - x == 16*x + 17*y + y - x == 17*y + 15*x
+== RHS
+
+C) always yields 1 (true).
+LHS == ~x + ~y + 1 == (-1 - x) + (-1 - y) + 1 == -1 - x - 1 - y + 1
+== -1 - x - y == -1 - (x + y) == ~ (x + y) == RHS
+
+D) always yields 1 (true).
+unsigned and signed arithmetic have same bit level operation, since bits do not change.
+LHS == ux - uy (unsigned arithmetic)
+RHS == - (unsigned) (y - x) (signed arithmetic cast to unsigned)
+uy - ux == (unsigned) (y - x) //negative multipled to LHS
+
+E) always yields 1 (true).
+(x >> 2) -> after right shift, the last two bits are dropped. 
+  In arithmetic shifting, adding more 1s to the left leads the number to be more negative.
+(x >> 2) << 2 -> after left shift, the first two bits are dropped, replaced by 
+0s at the end. Since 0 < 1, the final number decreases for both positive and negative number.
+For negative number, bits are moved to the left (more significant, increase in magnitude), leading the 
+final number to be more negative. 
+Therefore, LHS <= x. 
