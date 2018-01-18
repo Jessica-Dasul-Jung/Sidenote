@@ -1,5 +1,26 @@
 
 immediate: value known at compile time (ex) not input from user)
 
+conditional codes:
+  1. single bit registers:
+      CF: Carry Flag (for unsigned)
+      blahblah
+  
+  Conditional codes (explicit setting: test)
+  test instruction:
+    operation is bitwise and
+    typically want to test that the number is all zero or not
+    a = blah;
+    b = 01010101;
+    look at the flag to determine to whether a corresponds to b (mask)
+  
+
+jx = also referred to as branches
+<- [] -> : branch to different places
+
+
+d
+d
+
 
 
