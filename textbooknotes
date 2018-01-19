@@ -1,0 +1,9 @@
+
+compile code: p1.c, p2.c
+linux> gcc -0g -o p p1.c p2.c
+  -0g: instructs the compiler to apply a level of optimization that yields machine code that follows the overall structure of the
+        original C code
+
+C preprocessor: expands the souce code to include any files specified by #include command
+
+d
