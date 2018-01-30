@@ -1,7 +1,55 @@
 3.60
 
+F)
+long loop (long x, long n)
+{
+  long result = 0;
+  long mask;
+  for (mask = 1; mask != 0; mask = mask << n) {
+    result |= (x & mask);
+  }
+  return result;
+}
+
+A) 
+  x: %rdi
+  n: %esi
+  result: %rax
+  mask: %rdx
+B) 
+  result = 0
+  mask = 1
+C) test condition: mask != 0
+D) mask gets updated: mask = mask << n;
+E) result gets updated: result = result | (x & mask);
 
 3.63
 
+long switch_prob (long x, long n)
+{
+  long result = x;
+  switch (n) {
+    case 60:
+    case 62:
+      result = x * 8;
+      break;
+    case 63:
+      result = x >> 3;
+      break;
+    case 64:
+      result = x << 4;
+      result -= x;
+    case 65:
+      x = x * x;
+      break;
+    default:
+      result = x + 75;
+  }
+  return result;
+}
+
 
 3.65
+A) addq &8, %rdx
+B) addq $120, %rax
+C) M = 15
