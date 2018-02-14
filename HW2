@@ -53,3 +53,44 @@ long switch_prob (long x, long n)
 A) addq &8, %rdx
 B) addq $120, %rax
 C) M = 15
+
+
+5.17
+void *basic_memset (void *s, unsigned long c, size_t n)
+{
+  size_t K = sizeof (unsigned long);
+  size_t cnt = 0;
+  unsigned char *schar = s;
+  while (cnt < n)
+  {
+    if ((size_t) schar % K == 0)
+      break;
+    *schar++ = (unsigned char) c;
+    cnt++;
+  }
+  
+  schar = (unsigned char*) slong;
+  for (; cnt + K < n; cnt += K)
+    *slong++ = c;
+  
+  schar = (unsigned char*) slong;
+  for (; cnt < n; cnt++)
+    *schar++ = (unsigned char) c;
+  
+  return s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
