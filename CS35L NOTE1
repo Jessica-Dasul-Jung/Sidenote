@@ -1,0 +1,7 @@
+emacs --version: shows you the version
+-- to distinguish from -
+-: lots of option
+--: one option
+
+ex) brew --version
+  to check the version of the program
