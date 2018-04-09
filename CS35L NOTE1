@@ -27,6 +27,83 @@ echo (printf, cout)
 echo $var; //to print
 varr=$var; //assign variable to another variable
 echo $varr
+echo 5+1 //prints 5+1 (not 6)
+
+var=5+1
+echo $var //prints 5+1
+
+var=5+1
+echo $(5+1) //prints 5+1
+echo $((5+1))// prints 6, or put the expression in var and print var
+need to wrap calculation in $ and double parentheses
+echo $((var+1)) //prints 7 if var=6
+
+var="\$((5+1))"
+echo var //prints $((5+1)) //backslash ignores $
+
+var=ls;
+echo var //prints ls
+
+var='ls'
+echo var //performs ls command
+
+var=$(ls) //single bracket to wrap around command
+echo $var
+
+var='ls'
+varr=$((1+1))
+echo " $var is good $varr " //prints test2.txt (var command) is good 2 (varr variable)
+backslash special character: ignores special property
+
+echo " $var is good $varr"'kkjkj'" //prints test2.txt is good 2kkjkj
+echo ' $var is good $varr '//dont
+
+'ls' //still gives you teh output of ls, "ls" works the same
+
+
+speical variables:
+path variable: $
+home variable
+
+taking input from the command line:
+echo $0 //exists in bash program, prints the name of the program
+$0: gives you the first argument you put into the argument 
+  could give you absolute path, or ./a.sh
+./a.sh 100
+echo $1 //represents second argument = first argument of the program - prints 100
+cat $1
+./a.sh text.txt
+aaa
+bbb
+ccc
+
+echo $# //how many arguments the user inputs - FINALFINALFINAL - does not include $0
+./a.sh test.txt sdfsd
+gives 2
+
+./a.sh test.txt *
+gives 14 (wildcard will put everything in a list)
+
+ls *.txt //does work
+
+echo $* //nothing since no argument
+
+./a.sh kkjk 1221
+prints kkjk 1221 //echo $*: prints out every argument - built in
+
+exit 0 //standard exit
+exit
+
+input:
+read a
+echo a
+it will wait for the input: will echo exact same thing
+
+read -p "pleaes input:\n" a //notify the user the program is waiting for the input
+echo $a
+
+
+
 
 
 
