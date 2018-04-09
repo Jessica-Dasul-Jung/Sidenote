@@ -5,3 +5,28 @@ emacs --version: shows you the version
 
 ex) brew --version
   to check the version of the program
+
+04/09/2018
+Bash:
+#!/bin/bash
+./: current directory
+if we do not specify the path, the terminal will search through path variables to find a match
+relative path: ex) ./a.sh: try to execute the specify the program and run it
+chmod 777 a.sh
+./a.sh
+bash script: directly run it
+bash ./a.sh: specify it is bash (hassle) - just do #!/bin/bash
+
+bash script:
+# ls
+# ls /
+
+var=5; //how you assign a variable
+var= 5; //space: it will fail: bash will think this is another argument of this command, variable called var=
+echo (printf, cout)
+echo $var; //to print
+varr=$var; //assign variable to another variable
+echo $varr
+
+
+
