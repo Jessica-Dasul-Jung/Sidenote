@@ -139,8 +139,45 @@ directory
 
 -d: to check whether the file is a directory (in bracket)
 -f: to check whether the it is a file
--e: if [ -e "../etc" ]: exist?
+-e: if [ -e "../etc" ]: exists
 
+var='ls'
+currentdwd='pwd'
+for i in $var
+do
+  if [-e $i ]
+  then
+    echo $currentd/$i
+  fi
+done
+
+
+function t () {
+  echo "test"
+  echo $1 //first argument
+}
+
+t "arg1" "arg2"
+
+function t () {
+  echo $#
+}
+
+var=$0 //name of the function
+t "arg1" "arg2" $var
+
+function t {
+  echo $0
+  return "return var"
+}
+echo $t
+
+for i in {1..10}
+do
+  echo $i
+done
+
+echo ${#var} //length of var
 
 
 
