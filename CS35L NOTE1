@@ -102,6 +102,44 @@ it will wait for the input: will echo exact same thing
 read -p "pleaes input:\n" a //notify the user the program is waiting for the input
 echo $a
 
+bash scripting
+
+if ["4" == "5"]
+then
+echo "true"
+fi
+
+if [3 > 25] //gives true:
+consider this as string, 3>2 so gives true.
+if [3 > 55] //gives true
+
+if [3 -gt 5] //greater than
+if [3 -eq 3] //equal to
+-gt: greater than
+-lt: less than
+-ge: greater than or equal
+-le: less than or equal
+need space
+
+var=3;
+var2=4;
+
+if [$var -gt $var2]
+then 
+  echo "greater"
+elif [$var -eq $var2]
+then
+  echo "equal"
+else
+  echo "smaller"
+fi
+
+find . -type d
+directory
+
+-d: to check whether the file is a directory (in bracket)
+-f: to check whether the it is a file
+-e: if [ -e "../etc" ]: exist?
 
 
 
