@@ -220,6 +220,14 @@ az match with a[a-g]*z (can have nothing)
 agggggggggz : does not match with a[a-g]{5,8}z
 aggggggggz : match with a[a-g]{5,8}z
 
+(abc): want to group
+abcabcabcabcabc : match with (abc){5} repeat abc 5 times
+
+sed 's/cat/dog/file.txt' replace dog with cat in file.txt
+sed "s/b/a" test.txt : change the first occurrence of b to a
+sed "s/b/a/g" test.txt : change the all occurrences of b to a
+
+try using ^ and $ option
 
 
 
