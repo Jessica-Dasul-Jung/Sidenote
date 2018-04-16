@@ -48,25 +48,7 @@ xml language: html
 
 bash script: interpreting language
 
-Assume Assume Assume
-Assume match with ^Assume$
-abz match with a.z and a[abc]z
-abbz happens with a..z
-acz match with a[abc]z
-aabcz does not match with a[abc]z
-a[^abc]z -> match a.z since complement of ^abc, nothing of abc match
-a1z : match with a[0-9]z
-to put multiple things, need another bracket
-a1dz - for a[0-9][a-z]
-use \ to make something unspecial
-a[z //match with a\[z
-a.z //match with a\.z
 
-a2z : match with a\dz \d: digit
-agggggggz match with a[a-g]*z and a[a-g]+z
-agggz match with a[a-g]*z and a[a-g]+z
-agggbbz match with a[a-g]*z and a[a-g]+z (+: 1+) and a[a-g]{5}z (5 in between)
-az match with a[a-g]*z (can have nothing)
 
 d
 d
@@ -212,6 +194,31 @@ do
 done
 
 echo ${#var} //length of var
+
+
+
+Assume Assume Assume
+Assume match with ^Assume$
+abz match with a.z and a[abc]z
+abbz happens with a..z
+acz match with a[abc]z
+aabcz does not match with a[abc]z
+a[^abc]z -> match a.z since complement of ^abc, nothing of abc match
+a1z : match with a[0-9]z
+to put multiple things, need another bracket
+a1dz - for a[0-9][a-z]
+use \ to make something unspecial
+a[z //match with a\[z
+a.z //match with a\.z
+
+a2z : match with a\dz \d: digit
+agggggggz match with a[a-g]*z and a[a-g]+z
+agggz match with a[a-g]*z and a[a-g]+z
+agggbbz match with a[a-g]*z and a[a-g]+z (+: 1+) and a[a-g]{5}z (5 in between)
+az match with a[a-g]*z (can have nothing)
+
+agggggggggz : does not match with a[a-g]{5,8}z
+aggggggggz : match with a[a-g]{5,8}z
 
 
 
