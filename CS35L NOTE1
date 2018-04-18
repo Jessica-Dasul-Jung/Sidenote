@@ -228,6 +228,19 @@ sed "s/b/a" test.txt : change the first occurrence of b to a
 sed "s/b/a/g" test.txt : change the all occurrences of b to a
 
 try using ^ and $ option
+* in the beginning does not make sense: preceding expression infinite
+* at the end: infinite- all match (can have zero)
+.*i: match
+ls | sed "s:^:'pwd'/:g" - inputting
 
 
+Python:
+<if statement>
+if condition:
+  statement 1
+  statement 2
+  statement 3
 
+statement
+use indentation to separate blocks
+d
