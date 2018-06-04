@@ -147,3 +147,39 @@ if condition:
 statement
 use indentation to separate blocks
 d
+
+
+git commit -m "First commit"
+git add . : to add all files
+git add all: alternative
+
+all the modified files will be added to the staging area
+
+touch b.txt
+echo "Test" > b.txt
+git status
+b is untracked
+
+do not track binary
+you will make a new binary
+new compilation
+git will store new binary
+git tracks the difference by comparing the text between two files
+text file only
+never want to track /add binary files
+
+nano .gitigonore
+add stuff that you do not want to stage/add
+
+2>: standard output
+
+
+git checkout -- a.txt : discard changes
+git reset: force my repository to the previous state
+git reset --hard
+
+git pull: to see all the stuff you have is updated
+git push: after you are done
+
+
+
