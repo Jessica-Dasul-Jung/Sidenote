@@ -13,49 +13,6 @@ Bash:
 if we do not specify the path, the terminal will search through path variables to find a match
 relative path: ex) ./a.sh: try to execute the specify the program and run it
 chmod 777 a.sh
-./a.sh
-bash script: directly run it
-bash ./a.sh: specify it is bash (hassle) - just do #!/bin/bash
-
-bash script:
-# ls
-# ls /
-
-var=5; //how you assign a variable
-var= 5; //space: it will fail: bash will think this is another argument of this command, variable called var=
-echo (printf, cout)
-echo $var; //to print
-varr=$var; //assign variable to another variable
-echo $varr
-echo 5+1 //prints 5+1 (not 6)
-
-var=5+1
-echo $var //prints 5+1
-
-var=5+1
-echo $(5+1) //prints 5+1
-echo $((5+1))// prints 6, or put the expression in var and print var
-need to wrap calculation in $ and double parentheses
-echo $((var+1)) //prints 7 if var=6
-
-LAB 2
-duplicates: contents are the same
-file names under directory: ls
-how do we check for reuglar file
-creating a hard link: how to create a hard link - google
-
-xml language: html
-
-bash script: interpreting language
-
-
-
-d
-d
-
-
-var="\$((5+1))"
-echo var //prints $((5+1)) //backslash ignores $
 
 var=ls;
 echo var //prints ls
@@ -63,19 +20,11 @@ echo var //prints ls
 var='ls'
 echo var //performs ls command
 
-var=$(ls) //single bracket to wrap around command
-echo $var
-
-var='ls'
-varr=$((1+1))
 echo " $var is good $varr " //prints test2.txt (var command) is good 2 (varr variable)
 backslash special character: ignores special property
 
 echo " $var is good $varr"'kkjkj'" //prints test2.txt is good 2kkjkj
 echo ' $var is good $varr '//dont
-
-'ls' //still gives you teh output of ls, "ls" works the same
-
 
 speical variables:
 path variable: $
@@ -100,7 +49,6 @@ gives 2
 ./a.sh test.txt *
 gives 14 (wildcard will put everything in a list)
 
-ls *.txt //does work
 
 echo $* //nothing since no argument
 
@@ -115,15 +63,8 @@ read a
 echo a
 it will wait for the input: will echo exact same thing
 
-read -p "pleaes input:\n" a //notify the user the program is waiting for the input
-echo $a
 
 bash scripting
-
-if ["4" == "5"]
-then
-echo "true"
-fi
 
 if [3 > 25] //gives true:
 consider this as string, 3>2 so gives true.
@@ -136,37 +77,6 @@ if [3 -eq 3] //equal to
 -ge: greater than or equal
 -le: less than or equal
 need space
-
-var=3;
-var2=4;
-
-if [$var -gt $var2]
-then 
-  echo "greater"
-elif [$var -eq $var2]
-then
-  echo "equal"
-else
-  echo "smaller"
-fi
-
-find . -type d
-directory
-
--d: to check whether the file is a directory (in bracket)
--f: to check whether the it is a file
--e: if [ -e "../etc" ]: exists
-
-var='ls'
-currentdwd='pwd'
-for i in $var
-do
-  if [-e $i ]
-  then
-    echo $currentd/$i
-  fi
-done
-
 
 function t () {
   echo "test"
@@ -188,14 +98,7 @@ function t {
 }
 echo $t
 
-for i in {1..10}
-do
-  echo $i
-done
-
 echo ${#var} //length of var
-
-
 
 Assume Assume Assume
 Assume match with ^Assume$
