@@ -181,5 +181,99 @@ git reset --hard
 git pull: to see all the stuff you have is updated
 git push: after you are done
 
+final:
+branching and merge
+
+git fetch: copy the remote branch into local computer
+
+Final:
+  slide
+  assignment
+
+week 1: no emacs
+every command that appears in the slide/assignment might appear on the final
+Of the files in teh same directory as find, how many of them are not symbolic links?
+print out all your assignments and answers
+twist of assignment questions
+
+pay attention to shell scripting
+how to do calculation in shell script
+correct form for shell script
+go to home directory and check every single file inside a home ddirectory and see if the length of their name
+is two character long without using wildcard and shellscript
+sed
+regex...
+
+will not test you on patch
+will not test you to verify the signature of the file
+
+week 3: python
+not installing a small change to a big package
+python:
+read the sample final = similar format
+exact step to do that
+in python2
+read arguments from the command
+need to open/close file
+write a function
+(not sure about class)
+know how to handle list and dictionary
+how to import module
+import module_name
+pip?? python package management tool: in the note
+will not test...pip
+---15 pts---
+
+SSH:
+how a public system works - copy the picture from the slide
+knowledge of ssh command
+how you create a public/private key pair
+how to ssh into a server
+general questions
+not worth a lot
+will not test digital signature
+procedure to connect to other's beaglebone
+
+git:
+cover little about git
+create a file and commit it and revert it and do another commit
+push to the server, merge and stuff
+list of commands i will test on git - understand how to use each of those
+option f for commit, do not have to remember all options
+
+rest: C
+no C debugging: no GDB
+no debugging related stuff
+
+some 40 pt question on C programming: 
+1. linking - write Makefile
+2. system call using C instead of library
+3. multithreaded programming
+
+2 question on C on 3 topics above - 18 ~ 20 points
+
+
+concept question:
+can be ssh, sth related to c, interpreter, compiler...
+python/bash use interpreters
+c requires compiler
+java in the middle (not tested)
+do not have to write a lot
+at the beginning of the test
+
+dynamic linking
+
+
+
+
+
+
+
+know how to make Makefile
+d
+d
+d
+
+
 
 
